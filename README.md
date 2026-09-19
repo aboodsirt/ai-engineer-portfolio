@@ -1,6 +1,6 @@
 # AI Engineer Portfolio Lab
 
-Five focused AI engineering projects built around retrieval augmented generation, tool calling, agent orchestration, evaluation, and reliable LLM infrastructure.
+Six focused AI engineering projects built around retrieval augmented generation, tool calling, agent orchestration, evaluation, reliable LLM infrastructure, and voice interfaces.
 
 ## Projects
 
@@ -11,6 +11,7 @@ Five focused AI engineering projects built around retrieval augmented generation
 | [03 Research Brief Agent](projects/03-research-brief-agent) | Planner, parallel source workers, synthesis, source-aware output | `uvicorn app.main:app --reload` |
 | [04 LLM Evaluation Harness](projects/04-llm-evaluation-harness) | Dataset-driven scoring, judge prompts, aggregate quality metrics | `python -m app.evaluate` |
 | [05 LLM Gateway](projects/05-llm-gateway) | Timeouts, retries, fallback models, usage tracking, request IDs | `uvicorn app.main:app --reload` |
+| [06 Voice RAG Assistant](projects/06-voice-rag-assistant) | ElevenLabs speech-to-text, RAG grounding, OpenAI-compatible chat, ElevenLabs voice synthesis | `uvicorn app.main:app --reload` |
 
 Each project has its own README, dependency file, tests where useful, and a small sample dataset. The projects share an OpenAI-compatible API contract, so keys and model choices live in environment variables rather than source code.
 
@@ -32,8 +33,8 @@ Run a project from its directory so its `app` package is on the Python path.
 - Orchestrated a research workflow that separates planning, source collection, and synthesis while preserving traceable references.
 - Created an LLM evaluation harness that scores answer relevance, groundedness, and context coverage over a repeatable dataset.
 - Implemented an OpenAI-compatible LLM gateway with timeouts, retries, model fallback, request tracing, and usage accounting.
+- Built a voice-first RAG assistant that transcribes user audio, retrieves grounded support context, and returns an ElevenLabs-generated voice answer.
 
 ## Engineering choices
 
 The code stays intentionally small and readable while showing the boundaries that matter in real AI systems: provider clients, domain logic, persistence, HTTP APIs, validation, and tests. No API keys are committed.
-
